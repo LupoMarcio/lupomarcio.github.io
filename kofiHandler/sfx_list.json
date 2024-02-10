@@ -1,0 +1,14 @@
+{
+    "lv1": {
+        "filename": "sfx1.mp3",
+        "volume": 0.28
+    },
+    "lv2": {
+        "filename": "sfx2.mp3",
+        "volume": 0.20
+    },
+    "lv3": {
+        "filename": "sfx3.mp3",
+        "volume": 0.20
+    }
+}
