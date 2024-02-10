@@ -64,7 +64,7 @@ await client.on('chat', (channel, tags, message, self) => {
   // LupoMarcio ID: 88803358
   // PieTheLemon: 68866589
   if (sender === '431199284' || sender === '173663394' || sender === '88803358' || sender === '68866589') {
-    regex = /Ehy\s(.+)!!\sGrazie\sper\sla\sdonazione\sdi\s(\d+.\d+€)!!/; //Ehy Someone!! Grazie per la donazione di 3.00€!!
+    let regex = /Ehy\s(.+)!!\sGrazie\sper\sla\sdonazione\sdi\s(\d+.\d+€)!!/; //Ehy Someone!! Grazie per la donazione di 3.00€!!
     let match = message.match(regex);
     let donator; // User that donated money
     let amount; // String with the amount donated (currency included)
