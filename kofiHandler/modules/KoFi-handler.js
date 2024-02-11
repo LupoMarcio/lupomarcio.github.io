@@ -97,6 +97,7 @@ async function showKoFiAlert (){
   // Regex to recognise donator and amount
   const regex = /Ehy\s(.+)!!\sGrazie\sper\sla\sdonazione\sdi\s(\d+.\d+€)!!/; //Ehy Someone!! Grazie per la donazione di 3.00€!!
   const match = message.match(regex);
+  let pausettaSecs = 0;
   if (match) {
     let donator = match[1]; // User that donated money
     let amount = match[2]; // String with the amount donated (currency included)
@@ -104,10 +105,16 @@ async function showKoFiAlert (){
     // Animation activation
     document.getElementById("username").innerHTML = donator;
     document.getElementById("amount").innerHTML = amount;
+
+    if(amount >= 100.00){
+      pausetta = 26;
+      sfxs.lv100.play();
+    }
+    
     let tl = gsap.timeline({repeat:0, repeatDelay:0, yoyo:false});
     tl.to("#alert_widget-container", {duration: 0, opacity:"0"})
       .to("#alert_widget-container", {duration: 1, className:"animate__animated animate__bounceIn", delay:0})
-      .to("#alert_widget-container", {duration: 5, opacity:"1", delay: 0}, "-=1")
+      .to("#alert_widget-container", {duration: pausetta, opacity:"1", delay: 0}, "-=1")
       .to("#alert_widget-container", {duration: 1, className:"animate__animated animate__bounceOut", delay:0})
       .to("#alert_widget-container", {duration: 0, opacity:"0", className:"", delay:0})
     // Pause to wait for the animation to end;
@@ -115,7 +122,8 @@ async function showKoFiAlert (){
     // This way, the main part of the script can keep running, looking for other
     // messages of the donation bot
     console.log('Pause starting');
-    await sleep(6000).then(() => {console.log("Pause done!");});
+    let sleepTime = pausettaSecs * 1000;
+    await sleep(sleepTime).then(() => {console.log("Pause done!");});
     alert_counter -= 1;
     console.log("Alert counter", alert_counter);
     // If there is other messages, swoKoFiAlert is called recursively until alert_queue is empty 
