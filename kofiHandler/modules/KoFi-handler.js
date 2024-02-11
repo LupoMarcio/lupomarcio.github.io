@@ -106,10 +106,10 @@ async function showKoFiAlert (){
     document.getElementById("amount").innerHTML = amount;
     let tl = gsap.timeline({repeat:0, repeatDelay:0, yoyo:false});
     tl.to("#alert_widget-container", {duration: 0, opacity:"0"})
-      .to("#alert_widget-container", {duration: 0, className:"animate__animated animate__bounceIn", delay:0})
+      .to("#alert_widget-container", {duration: 1, className:"animate__animated animate__bounceIn", delay:0})
       .to("#alert_widget-container", {duration: 5, opacity:"1", delay: 0}, "-=1")
-      .to("#alert_widget-container", {duration: 0, className:"animate__animated animate__bounceOut", delay:0})
-      .to("#alert_widget-container", {duration: 0, opacity:"0"});
+      .to("#alert_widget-container", {duration: 1, className:"animate__animated animate__bounceOut", delay:0})
+      .to("#alert_widget-container", {duration: 0, opacity:"0", className:"", delay:0})
     // Pause to wait for the animation to end;
     // the await term means that the program will pause until the timer is done
     // This way, the main part of the script can keep running, looking for other
