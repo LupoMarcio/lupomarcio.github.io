@@ -108,22 +108,23 @@ async function showKoFiAlert (){
 
     // To work well, the else if structure should have decreasing value of crudeNum
     // (the float version of amount, which is a string)
-    if(crudeNum >= 10.00){
-      console.log("sfx duration:", sfxs.lv3.duration);
+    if(crudeNum >= 100.00){
       pausettaSecs = sfxs.lv3.duration;
       sfxs.lv3.play();
     }
+    else if(crudeNum >= 75.00){
+      pausettaSecs = sfxs.lv2.duration;
+      sfxs.lv2.play();
+    }
     else if(crudeNum >= 5.00){
-      console.log("sfx duration:", sfxs.lv2.duration);
       pausettaSecs = sfxs.lv2.duration;
       sfxs.lv2.play();
     }
     else {
-      console.log("sfx duration:", sfxs.lv1.duration);
       pausettaSecs = sfxs.lv1.duration;
       sfxs.lv1.play();
     }
-    
+    console.log("sfx duration:", pausettaSecs);
 
     if (pausettaSecs < window.config.min_pause) // Check if the pause is at least a minimum value
       pausettaSecs = window.config.min_pause; // min_pause is defined in the index.html
