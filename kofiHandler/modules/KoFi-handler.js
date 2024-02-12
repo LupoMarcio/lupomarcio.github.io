@@ -106,15 +106,31 @@ async function showKoFiAlert (){
     document.getElementById("username").innerHTML = donator;
     document.getElementById("amount").innerHTML = amount;
 
-    if(amount >= 100.00){
-      pausetta = 26;
-      sfxs.lv100.play();
+    // To work well, the else if structure should have decreasing value of crudeNum
+    // (the float version of amount, which is a string)
+    if(crudeNum >= 10.00){
+      console.log("sfx duration:", sfxs.lv3.duration);
+      pausettaSecs = sfxs.lv3.duration;
+      sfxs.lv3.play();
+    }
+    else if(crudeNum >= 5.00){
+      console.log("sfx duration:", sfxs.lv2.duration);
+      pausettaSecs = sfxs.lv2.duration;
+      sfxs.lv2.play();
+    }
+    else {
+      console.log("sfx duration:", sfxs.lv1.duration);
+      pausettaSecs = sfxs.lv1.duration;
+      sfxs.lv1.play();
     }
     
+
+    if (pausettaSecs < window.config.min_pause) // Check if the pause is at least a minimum value
+      pausettaSecs = window.config.min_pause; // min_pause is defined in the index.html
     let tl = gsap.timeline({repeat:0, repeatDelay:0, yoyo:false});
     tl.to("#alert_widget-container", {duration: 0, opacity:"0"})
       .to("#alert_widget-container", {duration: 1, className:"animate__animated animate__bounceIn", delay:0})
-      .to("#alert_widget-container", {duration: pausetta, opacity:"1", delay: 0}, "-=1")
+      .to("#alert_widget-container", {duration: pausettaSecs, opacity:"1", delay: 0}, "-=1")
       .to("#alert_widget-container", {duration: 1, className:"animate__animated animate__bounceOut", delay:0})
       .to("#alert_widget-container", {duration: 0, opacity:"0", className:"", delay:0})
     // Pause to wait for the animation to end;
