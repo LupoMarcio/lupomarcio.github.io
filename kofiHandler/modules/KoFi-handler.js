@@ -108,21 +108,69 @@ async function showKoFiAlert (){
 
     // To work well, the else if structure should have decreasing value of crudeNum
     // (the float version of amount, which is a string)
-    if(crudeNum >= 100.00){
-      pausettaSecs = sfxs.lv3.duration;
-      sfxs.lv3.play();
+    if(crudeNum >= 90.00){ //100
+      pausettaSecs = sfxs.10000.duration;
+      sfxs.10000.play();
     }
-    else if(crudeNum >= 75.00){
-      pausettaSecs = sfxs.lv2.duration;
-      sfxs.lv2.play();
+    else if(crudeNum >= 65.00){ //75
+      pausettaSecs = sfxs.7500.duration;
+      sfxs.7500.play();
+    }
+    else if(crudeNum >= 50.00){
+      pausettaSecs = sfxs.5000.duration;
+      sfxs.5000.play();
+    }
+    else if(crudeNum >= 40.00){
+      pausettaSecs = sfxs.4000.duration;
+      sfxs.4000.play();
+    }
+    else if(crudeNum >= 35.00){
+      pausettaSecs = sfxs.3500.duration;
+      sfxs.3500.play();
+    }
+    else if(crudeNum >= 30.00){
+      pausettaSecs = sfxs.3000.duration;
+      sfxs.3000.play();
+    }
+    else if(crudeNum >= 25.00){
+      pausettaSecs = sfxs.2500.duration;
+      sfxs.2500.play();
+    }
+    else if(crudeNum >= 20.00){
+      pausettaSecs = sfxs.2000.duration;
+      sfxs.2000.play();
+    }
+    else if(crudeNum >= 15.00){
+      pausettaSecs = sfxs.1500.duration;
+      sfxs.1500.play();
+    }
+    else if(crudeNum >= 10.00){
+      pausettaSecs = sfxs.1000.duration;
+      sfxs.1000.play();
+    }
+    else if(crudeNum >= 7.00){
+      pausettaSecs = sfxs.700.duration;
+      sfxs.700.play();
     }
     else if(crudeNum >= 5.00){
-      pausettaSecs = sfxs.lv2.duration;
-      sfxs.lv2.play();
+      pausettaSecs = sfxs.500.duration;
+      sfxs.500.play();
+    }
+    else if(crudeNum >= 4.00){
+      pausettaSecs = sfxs.400.duration;
+      sfxs.400.play();
+    }
+    else if(crudeNum >= 3.00){
+      pausettaSecs = sfxs.300.duration;
+      sfxs.300.play();
+    }
+    else if(crudeNum >= 2.00){
+      pausettaSecs = sfxs.200.duration;
+      sfxs.200.play();
     }
     else {
-      pausettaSecs = sfxs.lv1.duration;
-      sfxs.lv1.play();
+      pausettaSecs = sfxs.100.duration;
+      sfxs.100.play();
     }
     console.log("sfx duration:", pausettaSecs);
 
