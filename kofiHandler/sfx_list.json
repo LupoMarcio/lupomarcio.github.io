@@ -1,78 +1,78 @@
 {
     "b100": {
         "filename": "100.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b200": {
         "filename": "200.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b300": {
         "filename": "300.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b400": {
         "filename": "400.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b500": {
         "filename": "500.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b700": {
         "filename": "700.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b1000": {
         "filename": "1000.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b1500": {
         "filename": "1500.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b2000": {
         "filename": "2000.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b2500": {
         "filename": "2500.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b3000": {
         "filename": "3000.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b3500": {
         "filename": "3500.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b4000": {
         "filename": "4000.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b5000": {
         "filename": "5000.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b7500": {
         "filename": "7500.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "b10000": {
         "filename": "10000.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "lv1": {
         "filename": "sfx1.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "lv2": {
         "filename": "sfx2.mp3",
-        "volume": 0.20
+        "volume": 0.15
     },
     "lv3": {
         "filename": "sfx3.mp3",
-        "volume": 0.20
+        "volume": 0.15
     }
 }
